@@ -1,7 +1,7 @@
 # main.rb
 require 'rubygems'
 require 'sinatra'
-require "sequel"
+require 'sequel'
 require 'haml'
 require 'sass'
 

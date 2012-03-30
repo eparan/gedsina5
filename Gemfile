@@ -5,6 +5,7 @@ gem 'sinatra'
 gem 'thin'
 gem 'rack'
 gem 'sequel'
+gem 'sqlite3'
 gem 'haml'
 gem 'sass'
 
