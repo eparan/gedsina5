@@ -1,0 +1,22 @@
+#new-todo
+ %form{:method => 'post'}
+  %input{:type=>'text', :size=>40, :name=>'title', :id=>'todo-title'}
+  %input{:type=>'submit', :value=>'New Todo'}
+
+#content
+ %p== #{ @todos.count } Todos
+ %table.display
+  %tr
+   %th{:width=>'80%'} Title
+   %th Controls
+  - @todos.each do |todo|
+   %tr{:class=>("complete" if todo.complete)}
+    %td{:class=>'title'}= todo.title
+    %td
+     %a{:href=>(todo.complete ? "#{todo.id}/mark/incomplete" : "#{todo.id}/mark/complete")}= todo.complete ? "reopen" : "mark complete"
+     |
+     %a{:href=>("#{todo.id}/delete" )}= "delete"
+
+%script
+ :plain
+  document.getElementById('todo-title').focus();
