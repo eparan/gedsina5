@@ -4,6 +4,7 @@ source :rubygems
 gem 'sinatra'
 gem 'thin'
 gem 'rack'
+gem 'sqlite3-ruby'
 gem 'sequel'
 gem 'haml'
 gem 'sass'
