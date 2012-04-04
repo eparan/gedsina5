@@ -8,6 +8,14 @@ gem 'sequel'
 gem 'haml'
 gem 'sass'
 
+group :production do
+  gem 'pg'
+end
+group :development, :test do
+  gem 'sqlite3'
+end
+
+
 ### windows specific gems ###
 gem 'win32-process', :platforms => [:mswin, :mingw]
 gem 'win32console', :platforms => [:mswin, :mingw]

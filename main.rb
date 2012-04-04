@@ -6,7 +6,7 @@ require 'haml'
 require 'sass'
 
 # configuration
-DB = Sequel.sqlite('./gedsina.db')
+DB = Sequel.connect(ENV['DATABASE_URL'] || 'postgres://localhost/mydb')
 
 # create an items table
 if !DB.table_exists?(:todos)
