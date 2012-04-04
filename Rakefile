@@ -5,7 +5,7 @@ namespace :db do
 
     task :migrate do
         m = Sequel::Migrator
-        db = Sequel.connect(ENV['SHARED_DATABASE'] || 'postgres://localhost/mydb')
+        db = Sequel.connect(ENV['DATABASE_URL'] || 'postgres://localhost/mydb')
         m.run(db, '.')
     end
 end
