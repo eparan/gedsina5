@@ -1,6 +1,7 @@
 #source "http://rubygems.org"
 source :rubygems
 
+gem 'rake'
 gem 'sinatra'
 gem 'thin'
 gem 'rack'

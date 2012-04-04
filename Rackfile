@@ -1,3 +1,3 @@
 task :migrate do
-	DataMapper.auto_migrate!
+	Sequel.auto_migrate!
 end
