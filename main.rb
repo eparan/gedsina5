@@ -6,7 +6,7 @@ require 'haml'
 require 'sass'
 
 # configuration
-DB = Sequel.connect(ENV['DATABASE_URL'] || 'postgres://localhost/mydb')
+DB = Sequel.connect(ENV['SHARED_DATABASE_URL'] || 'postgres://localhost/mydb')
 
 # create an items table
 if !DB.table_exists?(:todos)
